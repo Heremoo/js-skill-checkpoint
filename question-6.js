@@ -1,7 +1,14 @@
 // Question #6: Calculating Total Price in User's Cart
 
+let inStock = [];
+
 function filterInStockProducts(products) {
-  // เริ่มเขียนโค้ดตรงนี้
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].quantity > 0) {
+      inStock.push(products[i])
+    }
+  }
+  return inStock
 }
 
 // ตัวอย่างการใช้งาน
